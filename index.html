@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- SEO Cơ bản -->
+    <title>TravelCo - Khám phá thế giới cùng chúng tôi</title>
+    <meta name="description" content="TravelCo cung cấp các tour du lịch trong nước và quốc tế trọn gói, uy tín và chất lượng.">
+    
+    <!-- Nhúng thư viện Animate.css qua CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    
+    <!-- Liên kết file CSS ngoài (Không dùng style trực tiếp để tránh trừ điểm) -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Khối 1: Header + Menu -->
+    <header class="site-header grid-area-header">
+        <nav class="main-nav">
+            <h1 class="logo animate__animated animate__pulse animate__infinite">TravelCo.</h1>
+            <ul class="nav-links">
+                <li><a href="#">Trang chủ</a></li>
+                <li><a href="#">Tour trong nước</a></li>
+                <li><a href="#">Tour nước ngoài</a></li>
+                <li><a href="#">Cẩm nang</a></li>
+                <li><a href="#booking">Đặt tour</a></li>
+            </ul>
+            <button id="theme-toggle" class="btn-theme">Bật DarkMode</button>
+        </nav>
+    </header>
+
+    <!-- Thẻ main gộp các vùng chính để chuẩn Semantic -->
+    <main class="grid-area-main">
+        
+        <!-- Khối 2: Banner / Hình ảnh -->
+        <section class="banner animate__animated animate__fadeInDown">
+            <div class="banner-content">
+                <h2>TravelCo</h2>
+                <p>Hành trình của bạn, đam mê của chúng tôi!</p>
+                <button class="btn-primary">Khám phá ngay</button>
+            </div>
+        </section>
+
+        <!-- Khối 3: Danh sách nội dung (6 tour) -->
+        <section class="tour-section">
+            <h2 class="section-title">Các Tour Nổi Bật</h2>
+            <div class="tour-list">
+                <!-- Tour 1 -->
+                <article class="tour-card animate__animated animate__fadeInUp">
+                    <img src="https://picsum.photos/400/250?random=1" alt="Phong cảnh vịnh Hạ Long">
+                    <div class="card-body">
+                        <h3>Vịnh Hạ Long</h3>
+                        <p><strong>Thời gian:</strong> 3 Ngày 2 Đêm</p>
+                        <p><strong>Khởi hành từ:</strong> Hà Nội</p>
+                        <p class="price">2,500,000 VNĐ</p>
+                    </div>
+                </article>
+                <!-- Tour 2 -->
+                <article class="tour-card animate__animated animate__fadeInUp">
+                    <img src="https://picsum.photos/400/250?random=2" alt="Bãi biển Phú Quốc">
+                    <div class="card-body">
+                        <h3>Khám Phá Phú Quốc</h3>
+                        <p><strong>Thời gian:</strong> 4 Ngày 3 Đêm</p>
+                        <p><strong>Khởi hành từ:</strong> TP. HCM</p>
+                        <p class="price">4,200,000 VNĐ</p>
+                    </div>
+                </article>
+                <!-- Tour 3 -->
+                <article class="tour-card animate__animated animate__fadeInUp">
+                    <img src="https://picsum.photos/400/250?random=3" alt="Thành phố Đà Lạt mộng mơ">
+                    <div class="card-body">
+                        <h3>Đà Lạt Mộng Mơ</h3>
+                        <p><strong>Thời gian:</strong> 3 Ngày 2 Đêm</p>
+                        <p><strong>Khởi hành từ:</strong> TP. HCM</p>
+                        <p class="price">2,100,000 VNĐ</p>
+                    </div>
+                </article>
+                <!-- Tour 4 -->
+                <article class="tour-card animate__animated animate__fadeInUp">
+                    <img src="https://picsum.photos/400/250?random=4" alt="Chùa cổ ở Thái Lan">
+                    <div class="card-body">
+                        <h3>Băng Cốc - Pattaya</h3>
+                        <p><strong>Thời gian:</strong> 5 Ngày 4 Đêm</p>
+                        <p><strong>Khởi hành từ:</strong> TP. HCM</p>
+                        <p class="price">6,500,000 VNĐ</p>
+                    </div>
+                </article>
+                <!-- Tour 5 -->
+                <article class="tour-card animate__animated animate__fadeInUp">
+                    <img src="https://picsum.photos/400/250?random=5" alt="Núi Phú Sĩ Nhật Bản">
+                    <div class="card-body">
+                        <h3>Nhật Bản Cung Đường Vàng</h3>
+                        <p><strong>Thời gian:</strong> 6 Ngày 5 Đêm</p>
+                        <p><strong>Khởi hành từ:</strong> Hà Nội</p>
+                        <p class="price">25,000,000 VNĐ</p>
+                    </div>
+                </article>
+                <!-- Tour 6 -->
+                <article class="tour-card animate__animated animate__fadeInUp">
+                    <img src="https://picsum.photos/400/250?random=6" alt="Cảnh quan Bali Indonesia">
+                    <div class="card-body">
+                        <h3>Thiên Đường Bali</h3>
+                        <p><strong>Thời gian:</strong> 4 Ngày 3 Đêm</p>
+                        <p><strong>Khởi hành từ:</strong> TP. HCM</p>
+                        <p class="price">10,500,000 VNĐ</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Khối 4: Form đặt tour -->
+        <section id="booking" class="booking-section animate__animated animate__zoomIn">
+            <h2 class="section-title">Đặt Tour Của Bạn</h2>
+            <form action="#" method="POST" class="booking-form">
+                
+                <div class="form-group">
+                    <label for="fullname">Họ và tên:</label>
+                    <input type="text" id="fullname" name="fullname" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Điện thoại:</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="date">Ngày khởi hành:</label>
+                    <input type="date" id="date" name="date" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="guests">Số khách:</label>
+                    <input type="number" id="guests" name="guests" min="1" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Loại phòng:</label>
+                    <div class="radio-group">
+                        <input type="radio" id="room-single" name="roomType" value="single" checked>
+                        <label for="room-single">Phòng đơn</label>
+                        
+                        <input type="radio" id="room-double" name="roomType" value="double">
+                        <label for="room-double">Phòng đôi</label>
+                        
+                        <input type="radio" id="room-family" name="roomType" value="family">
+                        <label for="room-family">Phòng gia đình</label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="tour-select">Tour muốn đi:</label>
+                    <select id="tour-select" name="tour">
+                        <option value="halong">Vịnh Hạ Long</option>
+                        <option value="phuquoc">Khám Phá Phú Quốc</option>
+                        <option value="dalat">Đà Lạt Mộng Mơ</option>
+                        <option value="thailan">Thái Lan (Băng Cốc - Pattaya)</option>
+                        <option value="nhatban">Nhật Bản Cung Đường Vàng</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Dịch vụ thêm:</label>
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="service-car" name="services" value="car">
+                        <label for="service-car">Xe đưa đón sân bay</label>
+                        
+                        <input type="checkbox" id="service-food" name="services" value="food">
+                        <label for="service-food">Gói ăn chay/kiêng</label>
+                        
+                        <input type="checkbox" id="service-guide" name="services" value="guide">
+                        <label for="service-guide">Hướng dẫn viên riêng</label>
+                    </div>
+                </div>
+
+                <div class="form-group full-width">
+                    <label for="requests">Yêu cầu đặc biệt:</label>
+                    <textarea id="requests" name="requests" rows="4"></textarea>
+                </div>
+
+                <div class="form-actions full-width">
+                    <button type="submit" class="btn-submit">Đặt tour</button>
+                    <button type="reset" class="btn-reset">Hủy</button>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <!-- Khối 5: Footer -->
+    <footer class="site-footer grid-area-footer">
+        <div class="footer-content">
+            <address>
+                <strong>Văn phòng:</strong> 123 Đường Du Lịch, Quận 1, TP. HCM<br>
+                <strong>Số GP LH:</strong> 01-234/2026/TCDL-GPLHQT<br>
+                <strong>Hotline:</strong> 1900 6789
+            </address>
+        </div>
+        <div class="copyright">
+            &copy; 2026 TravelCo. Bản quyền thuộc về sinh viên Đặng Tiến Thành.
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
